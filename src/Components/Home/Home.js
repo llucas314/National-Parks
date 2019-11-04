@@ -7,7 +7,7 @@ const Home = props => {
   return (
     <div>
       {props.parks.map(park => (
-        <Link to={`/park/${park.parkCode}`} key={park.id}>
+        <Link to={`/park/${park.id}`} key={park.id}>
           <ParkItem {...park} />
         </Link>
       ))}

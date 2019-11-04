@@ -5,6 +5,7 @@ import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home/Home";
 import parksData from "./data/parks.json";
 import { Route } from "react-router-dom";
+import Details from "./Components/Details/Details";
 
 class App extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class App extends Component {
           <Route
             path="/park/:id"
             exact
-            render={() => <Home {...this.state} />}
+            render={routerProps => <Details {...this.state} {...routerProps} />}
           />
         </main>
         <Footer />
