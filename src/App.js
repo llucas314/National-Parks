@@ -6,7 +6,7 @@ import Home from "./Components/Home/Home";
 import { Route } from "react-router-dom";
 import Details from "./Components/Details/Details";
 const url =
-  "https://developer.nps.gov/api/v1/parks?limit=50&fields=images&api_key=guuGRau30aelpIGdZ0fQVdkkXIu6SE6u2glDAAOl";
+  "https://developer.nps.gov/api/v1/parks?limit=50&fields=images,addresses&api_key=guuGRau30aelpIGdZ0fQVdkkXIu6SE6u2glDAAOl";
 class App extends Component {
   constructor(props) {
     super(props);

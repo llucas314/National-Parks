@@ -23,7 +23,9 @@ const Details = props => {
       </p>
       <h2>Directions</h2>
       <p>{details.directionsInfo}</p>
-      <button>Read More</button>
+      <a href={details.url} target="_blank" rel="noopener noreferrer">
+        Read More
+      </a>
       <div className="img-container">
         {details.images.map((image, i) => (
           <img key={i} src={image.url} alt={image.altText} />
