@@ -1,15 +1,13 @@
 import React from "react";
+import ParkItem from "./ParkItem/ParkItem";
 
 const Home = props => {
   console.log(props.parks);
   return (
     <div>
       {props.parks.map(park => (
-        <div key={park.id}>
-          <img src={park.images[0].url} alt={park.images[0].altText} />
-          <h2>{park.fullName}</h2>
-        </div>
-      ))}{" "}
+        <ParkItem {...park} />
+      ))}
     </div>
   );
 };
