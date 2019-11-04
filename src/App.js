@@ -21,6 +21,11 @@ class App extends Component {
         <Nav />
         <main>
           <Route path="/" exact render={() => <Home {...this.state} />} />
+          <Route
+            path="/park/:id"
+            exact
+            render={() => <Home {...this.state} />}
+          />
         </main>
         <Footer />
       </div>
