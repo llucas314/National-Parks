@@ -1,7 +1,6 @@
 import React from "react";
 import ParkItem from "./ParkItem/ParkItem";
 import { Link } from "react-router-dom";
-
 const Home = props => {
   console.log(props.parks);
   return (

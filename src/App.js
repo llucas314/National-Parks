@@ -3,19 +3,31 @@ import "./App.css";
 import Nav from "./Components/Nav/Nav";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home/Home";
-import parksData from "./data/parks.json";
 import { Route } from "react-router-dom";
 import Details from "./Components/Details/Details";
-
+const url =
+  "https://developer.nps.gov/api/v1/parks?limit=50&fields=images&api_key=guuGRau30aelpIGdZ0fQVdkkXIu6SE6u2glDAAOl";
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      parks: parksData
+      parks: []
     };
   }
+  componentDidMount() {
+    fetch(url)
+      .then(response => response.json())
+      .then(response => {
+        console.log(response);
 
+        let parksData = response.data;
+        this.setState({ parks: parksData });
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  }
   render() {
     return (
       <div>
