@@ -5,9 +5,9 @@ import "./Home.css";
 const Home = props => {
   console.log(props.parks);
   return (
-    <div>
+    <div className="parks-container">
       {props.parks.map(park => (
-        <Link to={`/park/${park.id}`} key={park.id}>
+        <Link to={`/park/${park.id}`} key={park.id} className="item-list">
           <ParkItem {...park} />
         </Link>
       ))}
