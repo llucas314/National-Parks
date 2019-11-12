@@ -1,8 +1,8 @@
 # National Parks
 
 This website displays National Parks and their information. The purpose of this repository is to create a React app that uses react-router and communicates with a 3rd party API. 
-[Check out the website here!]
-(https://zealous-villani-add409.netlify.com)
+
+[Check out the website here!](https://zealous-villani-add409.netlify.com)
 
 [Click here for the Adobe XD mockup used to create this site.](https://drive.google.com/file/d/1DJS8ysB1N9Kp89_V_loagQiFNU_4jZoN/view?usp=sharing)
 
