@@ -10,7 +10,7 @@ This website displays National Parks and their information. The purpose of this 
 
 ![park1](./park1.png)
 
-![park2](./park2.png)
+
 ## Built With
 
 * Javascript/ReactJS
