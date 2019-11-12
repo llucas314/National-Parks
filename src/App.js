@@ -5,6 +5,7 @@ import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home/Home";
 import { Route } from "react-router-dom";
 import Details from "./Components/Details/Details";
+import Loading from "./Loading.js";
 const url =
   "https://developer.nps.gov/api/v1/parks?limit=50&fields=images,addresses&api_key=guuGRau30aelpIGdZ0fQVdkkXIu6SE6u2glDAAOl";
 class App extends Component {
@@ -12,7 +13,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      parks: []
+      parks: [],
+      done: false
     };
   }
   componentDidMount() {
@@ -23,6 +25,7 @@ class App extends Component {
 
         let parksData = response.data;
         this.setState({ parks: parksData });
+        this.setState({ done: true });
       })
       .catch(err => {
         console.error(err);
@@ -33,7 +36,11 @@ class App extends Component {
       <div>
         <Nav />
         <main>
-          <Route path="/" exact render={() => <Home {...this.state} />} />
+          {!this.state.done ? (
+            <Route path="/" exact component={Loading} />
+          ) : (
+            <Route path="/" exact render={() => <Home {...this.state} />} />
+          )}
           <Route
             path="/park/:id"
             exact

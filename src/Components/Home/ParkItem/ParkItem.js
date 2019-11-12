@@ -13,5 +13,3 @@ const ParkItem = props => {
 };
 
 export default ParkItem;
-
-// <img src={props.images[0].url} alt={props.images[0].altText} />
